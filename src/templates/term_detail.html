@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ term.modality|capitalize }} {{ term.harmType|capitalize }} – SHR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='grid.css') }}">
+</head>
+<body>
+    <h1>{{ term.modality|capitalize }} {{ term.harmType|capitalize }}</h1>
+    <p><strong>Definition:</strong> {{ term.definition }}</p>
+    <p><strong>Legal basis:</strong> {{ term.legalBasis }}</p>
+    <p><strong>Requirements/Specifics:</strong> {{ term.requirements }}</p>
+    <p><strong>Primary source:</strong> {{ term.source }}</p>
+    <a href="/">← Back to grid</a>
+</body>
+</html>
