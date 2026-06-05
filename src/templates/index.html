@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sonic Harm Registry – Interactive Grid</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='grid.css') }}">
+</head>
+<body>
+    <h1>Sonic Harm Registry (SHR)</h1>
+    <p>Click any cell to view full details, legal basis, and requirements.</p>
+    <div class="grid-container">
+        <table class="term-grid" id="dynamic-grid">
+            <!-- JavaScript will populate -->
+        </table>
+    </div>
+    <footer>
+        <p>Licensed under CC BY-NC 4.0. Data from <a href="/docs/research_report.md">full research report</a>.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='grid.js') }}"></script>
+</body>
+</html>
