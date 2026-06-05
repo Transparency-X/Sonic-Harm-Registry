@@ -1,0 +1,7 @@
+thresholds:
+  who_night: 55  # dBA
+  who_day: 65    # dBA
+  osha_action: 85  # dBA, 8-hour TWA
+  osha_upper: 87   # dBA with hearing protection
+  acoustic_harassment_device_peak: 190  # dB
+  tinnitus_risk_impulse: 140  # dB peak
