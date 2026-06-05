@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compare terms – SHR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='grid.css') }}">
+</head>
+<body>
+    <h1>Compare Acoustic Harm Terms</h1>
+    <form id="compare-form">
+        <label>Select terms (comma‑separated IDs, e.g. acoustic_harassment,sound_harassment):</label>
+        <input type="text" id="term-ids" size="60">
+        <button type="submit">Compare</button>
+    </form>
+    <div id="results"></div>
+    <script>
+        document.getElementById('compare-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const ids = document.getElementById('term-ids').value.split(',');
+            const resp = await fetch('/api/compare', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({terms: ids})
+            });
+            const data = await resp.json();
+            let html = '<table class="term-grid"><tr><th>Term</th><th>Definition</th><th>Legal basis</th></tr>';
+            data.forEach(term => {
+                html += `<tr><td>${term.modality}_${term.harmType}</td><td>${term.definition}</td><td>${term.legalBasis}</td></tr>`;
+            });
+            html += '</table>';
+            document.getElementById('results').innerHTML = html;
+        });
+    </script>
+</body>
+</html>
