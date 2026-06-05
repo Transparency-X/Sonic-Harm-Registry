@@ -1,0 +1,23 @@
+{
+  "miyara2000": {
+    "title": "Violencia acústica: un concepto interdisciplinario",
+    "author": "Federico Miyara",
+    "year": 2000,
+    "url": "https://example.com/miyara2000"
+  },
+  "ouzounian2026": {
+    "title": "The Trembling City",
+    "publisher": "MIT Press",
+    "year": 2026
+  },
+  "carozzi2024": {
+    "court": "EAT",
+    "year": 2024,
+    "url": "https://www.gov.uk/employment-appeal-tribunal-decisions/carozzi-v-university-of-hertfordshire"
+  },
+  "hrw2025": {
+    "organization": "Human Rights Watch",
+    "year": 2025,
+    "url": "https://www.hrw.org/news/2025/03/12/thailand-cambodia-loudspeaker-torture"
+  }
+}
