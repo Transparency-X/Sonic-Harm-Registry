@@ -1,0 +1,51 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f4f6f9;
+}
+.grid-container {
+    overflow-x: auto;
+}
+.term-grid {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.term-grid th, .term-grid td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    vertical-align: top;
+    text-align: left;
+}
+.term-grid th {
+    background: #2c3e50;
+    color: white;
+    font-weight: 600;
+}
+.modality-col {
+    background: #ecf0f1;
+    font-weight: bold;
+}
+.term-cell {
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.term-cell:hover {
+    background: #e8f4f8;
+}
+.definition-preview {
+    font-size: 0.9em;
+}
+.legal-basis {
+    font-size: 0.8em;
+    color: #555;
+    margin-top: 6px;
+}
+@media (max-width: 768px) {
+    .term-grid th, .term-grid td {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
